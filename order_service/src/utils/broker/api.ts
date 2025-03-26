@@ -36,7 +36,6 @@ export const GetStockDetails = async (ids: number[]) => {
 
 export const ValidateUser = async (token: string) => {
   try {
-    // axios.defaults.headers.common["Authorization"] = token;
     const response = await axios.get(`${AUTH_SERVICE_BASE_URL}/auth/validate`, {
       headers: {
         Authorization: `Bearer ${token}`,
