@@ -7,6 +7,8 @@ export const RequestAuthorizer = async (
   next: NextFunction
 ) => {
   try {
+    console.log(req.headers.authorization);
+    
     if (!req.headers.authorization) {
       res
         .status(403)
